@@ -1,0 +1,25 @@
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form name="gwc" method="post" action="{:url('index/Orderform/scdd')}">
+            <table class="table-hover">
+               {volist name="Shoppingcart" id="sc"}
+                <tr align="center">
+                   <td><input type="checkbox" name="sp[]" value="{$sc.mobile_version}"></td>
+                   <td>{$sc.mobile_version}</td>
+                   <td>{$sc.mobile_name}</td>
+                   <td>{$sc.mobile_price}</td>
+                   <td><a href="http://127.0.0.1:90/qwe1/public/gbsl/{$sc.mobile_version}/{$sc.num-1}">-</a>
+                   <input type="text" name="num" size="2" value="{$sc.num}" style="text-align:center;">
+                   <a href="http://127.0.0.1:90/qwe1/public/gbsl/{$sc.mobile_version}/{$sc.num+1}">+</a>
+                   </td>
+                    <td><a href="http://127.0.0.1:90/qwe1/public/scsp/{$sc.mobile_version}">删除</a></td>
+                </tr>    
+    {/volist} 
+            </table>
+            <input type="submit" value="生成订单" />
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

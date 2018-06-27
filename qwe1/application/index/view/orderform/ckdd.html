@@ -1,0 +1,30 @@
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" style="margin:100px 0 200px 0">
+        <table border="2" class="table table-hover" >
+         <tr align="center">
+         <th>产品数量</th>
+         <th> 产品名称</th>
+         <th>产品总额</th>
+         </tr>
+          {volist name="Orderform" id="of"}
+        <tr align="center">
+            <td>{$of.o_id}</td>
+            <td>{$of.mess}</td>
+            <td>{$of.sum}</td>
+        
+        {/volist}
+        </tr>
+        <br />
+          <tr>
+         <td colspan="3" align="center"> 总计:{$sum} </td>
+    
+          </tr>
+   </table>
+    <center>
+     <input type="submit" name="submit" value="付款" class="btn btn-defualt" >
+    </center>
+    </div>
+    <div class="col-md-2"></div>
+</div>

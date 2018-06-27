@@ -1,0 +1,28 @@
+﻿<center><h3>当前显示的内容是:</h3></center>
+<br>
+<div class="row">
+ <div class="col-md-2"></div>
+ <div class="col-md-8" style="margin:100px 0 180px 0">
+<table border="2" align="center" class="table table-hover">
+  <tr align="center">
+  <th>手机标识号</th>
+  <th>手机名称</th>
+  <th>手机制造商</th>
+  <th>手机价格</th>
+  <th>查看详情</th>
+  <th>添加到购物车</th>
+  </tr>
+  {volist name="mobile" id="m"}
+  <tr align="center" class="table table-hover">
+    <td>{$m.mobile_version}</td>
+    <td>{$m.mobile_name}</td>
+    <td>{$m.mobile_made}</td>
+    <td>{$m.mobile_price}</td>
+    <td><a href="http://127.0.0.1:90/qwe1/public/ckxj/{$m.mobile_version}">查看细节</a></td>
+    <td><a href="http://127.0.0.1:90/qwe1/public/jrgwc/{$m.mobile_version}">加入购物车</a></td>
+  </tr>
+  {/volist}
+</table>
+</div>
+ <div class="col-md-2"></div>
+</div>

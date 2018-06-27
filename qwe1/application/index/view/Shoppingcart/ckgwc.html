@@ -1,0 +1,34 @@
+
+<style>
+    span{
+        text-align:center;
+        display:block;
+        margin-top:5px;
+    }
+</style>
+<hr>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" align="center" style="margin:80px 0 280px 0">
+        <center><h2>请选择你需要购买的商品</h2></center>
+        <form name="gwc" method="post" action="{:url('index/Orderform/scdd')}">
+            <table class="table table-hover" border="2" align="center" >
+               {volist name="Shoppingcart" id="sc"}
+                <tr >
+                   <label class="checkbox-inline"><td align="center"><input type="checkbox" name="sp[]" value="{$sc.mobile_version}"></td></label>
+                   <td align="center">{$sc.mobile_version}</td>
+                   <td align="center">{$sc.mobile_name}</td>
+                   <td align="center">{$sc.mobile_price}</td>
+                   <td align="center"><a href="http://127.0.0.1:90/qwe1/public/gbsl/{$sc.mobile_version}/{$sc.num-1}"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a>
+                   <input  type="text" name="num" size="2" value="{$sc.num}" style="text-align:center;">
+                   <a href="http://127.0.0.1:90/qwe1/public/gbsl/{$sc.mobile_version}/{$sc.num+1}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></a>
+                   </td>
+                    <td align="center"><a href="http://127.0.0.1:90/qwe1/public/scsp/{$sc.mobile_version}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                </tr>    
+    {/volist} 
+            </table>
+            <input type="submit" value="立即购买" class="btn btn-default" />
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

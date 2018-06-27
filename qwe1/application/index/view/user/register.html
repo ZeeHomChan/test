@@ -1,0 +1,72 @@
+<!--<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4" style="margin:50px 0 100px 0">
+<form action="{:url('index/User/handleRegister')}" method="post" name="form">
+  <div class="form-group has-success">
+    <label for="yonghuming">用户名</label>
+    <input type="text" class="form-control" id="logname" placeholder="用户名" name="logname">
+  </div>
+  
+  <div class="form-group has-error">
+    <label for="exampleInputPassword1">用户密码</label>
+    <input type="password" class="form-control" id="password" placeholder="密码" name="password">
+  </div>
+  <div class="form-group has-success">
+    <label for="exampleInputPassword1">确认密码</label>
+    <input type="password" class="form-control" id="passwordagain"
+    placeholder="Password" name="passwordagain" placeholder="确认密码">
+  </div>
+  <div class="form-group has-warning">
+   <label for="phone">电话</label>
+   <input type="text"  class="form-control" placeholder="phone" name="phone">
+   </div>
+  
+   <div class="form-group has-error"
+      <label for="dizhi">邮寄地址</label>
+   <input type="text"  class="form-control" placeholder="地址" name="address">
+   </div>
+   <div class="form-group has-warning">
+      <label for="name">真实姓名</label>
+   <input type="text"  class="form-control" placeholder="真实姓名" name="realname" id="realname">
+   </div>
+  <button type="submit" class="btn btn-primary">提交</button>
+  <button type="reset" class="btn btn-info">重置</button>
+</form>
+</div>
+<div class="col-md-4"></div>
+</div>
+-->
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4" style="margin:50px 0 100px 0">
+<div align="center">
+<form action="{:url('index/User/handleRegister')}" method="post" name="form">
+
+    
+   
+      <div class="form-group has-success"><label for="yonghuming">用户名</label>
+      <input type="text" name="logname" id="logname" size="20" class="form-control" placeholder="用户名" /></div>
+      <div class="form-group has-success"><label for="mima">用户密码</label>
+      <input type="password" name="password" id="password" size="20" class="form-control" placeholder="密码"/></div>
+   
+      <div class="form-group has-success"><label for="qrmima">确认密码</label>
+      <td><input type="password" name="passwordagain" id="passwordagain" size="20" class="form-control" placeholder="重复密码"/></div>
+      <div class="form-group has-success"><label for="mima">电话</label>
+      <input type="text" name="phone" size="20" class="form-control" placeholder="phone"></div>
+   
+        <div class="form-group has-success"><label for="dizhi">邮寄地址</label>
+      <input type="text" name="address" size="20" class="form-control" placeholder="adress"></div>
+       <div class="form-group has-success"><label for="name">真实姓名</label>
+       <input type="text" name="realname" size="20" class="form-control" placeholder="name"></div>
+        
+  
+       <input name="submit" class="btn btn-primary" type="submit" value="提交" />
+       <input name="reset" class="btn btn-info" type="reset" value="重置" />
+    </tr>
+
+</form>
+</div >
+</div>
+<div class="col-md-4"></div>
+</div>

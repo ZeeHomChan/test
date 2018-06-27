@@ -1,0 +1,73 @@
+{layout name="layout"}
+<style>
+         #myCarousel {
+    margin: -20px 0 0 0;
+}
+.carousel-inner .item img {
+    margin: 0 auto;
+
+}
+.div1{
+    overflow:hidden;
+}
+.div1 img:hover{
+  transform: scale(1.1,1.1);
+    transition:all 2s;
+}
+</style>
+<div id="myCarousel" class="carousel slide">                        <!--设置轮播器区域样式，设置轮播器滚动样式-->
+    <ol class="carousel-indicators">                                <!--设置轮播器列表区域样式，就是小圆点区域样式-->
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>    <!--设置当前列表首选-->
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">                                    <!--设置轮播器图片区域-->
+        <div class="item active tp1">                                <!--设置轮播器图片样式-->
+            <a href="#"><img src="__CSS__/2.JPG" alt="第一张"></a>
+        </div>
+        <div class="item tp2">
+            <a href="#"><img src="__CSS__/3.JPG" alt="第二张"></a>
+        </div>
+        <div class="item tp3">
+            <a href="#"><img src="__CSS__/1.JPG" alt="第三张"></a>
+        </div>
+    </div>
+    <!--设置轮播器箭头区域-->
+    <a href="#myCarousel" data-slide="prev" class="carousel-control left">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a href="#myCarousel" data-slide="next" class="carousel-control right">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+<div class="row div1">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="__CSS__/4.png" alt="...">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="__CSS__/5.png" alt="...">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="__CSS__/7.png" alt="...">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="__CSS__/6.jpg" alt="...">
+    </a>
+  </div>
+</div>
+<script>
+           $(function () {
+    $('#myCarousel').carousel({
+        //设置自动播放/3 秒
+        interval: 3000,
+    });
+});
+
+</script>
